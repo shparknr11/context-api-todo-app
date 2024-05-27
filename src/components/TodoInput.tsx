@@ -40,7 +40,11 @@ const InputInnerStyle = styled.div`
   gap: 16px;
 `;
 
-const TodoInput = ({ onClose }) => {
+interface Props {
+  onClose: () => void;
+}
+
+const TodoInput = ({ onClose }: Props) => {
   const { onAdd } = useContext(TodoListContext);
   const [todo, setTodo] = useState("");
   const [mesaage, setMessage] = useState("");

@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
-import React from "react";
+
+interface Props {
+  value: string;
+  onChange: (text: string) => void;
+}
 
 const InputStyle = styled.input`
   font-size: 1.2rem;
   padding: 8px;
 `;
 
-const TextInput = ({ value, onChange }) => {
+const TextInput = ({ value, onChange }: Props) => {
   return (
     <InputStyle
       type="text"
